@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           title: Center(child: Text("Purity")),
           backgroundColor: Color(0xff0000000),
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.orange,
         body: 
           Center(child: Text("Hello")),
         floatingActionButton: FloatingActionButton(
