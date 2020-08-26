@@ -9,16 +9,41 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("Purity")),
-          backgroundColor: Color(0xff0000000),
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                width: 100,
+                height: double.infinity,
+                color: Colors.red,
+                child: Text("Container I"),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width:100,
+                    height: 100,
+                    color: Colors.orange,
+                    child: Text("Container II")),
+                  Container(
+                      width:100,
+                      height: 100,
+                      color: Colors.green,
+                      child: Text("Container II")),],
+              ),
+              Container(
+                  width:100,
+                  height: double.infinity,
+                  color: Colors.amber,
+                  child: Text("Container III")),
+            ]
+          ),
+
         ),
-        backgroundColor: Colors.orange,
-        body: 
-          Center(child: Text("Hello")),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Color(0xff000000),
-          child: Icon(Icons.add)),
+
       ),
     );
   }
