@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
@@ -34,43 +35,32 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 letterSpacing: 2.5,
               )),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.amber,),
-                      SizedBox(
-                          width: 10
+                child:  ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.amber,),
+                    title: Text('+41 79 349 33 68',
+                      style: TextStyle(
+                        color: Colors.amber.shade900,
+                          fontFamily: 'SourceCodePro',
                       ),
-                      Text('+41 79 349 33 68',
-                        style: TextStyle(
-                          color: Colors.amber.shade900,
-                        ),)
-                    ]
+                    ),
+                  ),
                 ),
-              ),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.alternate_email,
-                        color: Colors.amber,),
-                      SizedBox(
-                          width: 10
-                      ),
-                      Text('tharrmeehan@gmail.com',
-                        style: TextStyle(
-                          color: Colors.amber.shade900,
-                        ),)
-                    ]
-                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.alternate_email,
+                    color: Colors.amber,),
+                  title: Text('tharrmeehan@gmail.com',
+                    style: TextStyle(
+                      color: Colors.amber.shade900,
+                      fontFamily: 'SourceCodePro'
+                    ),),
+                )
               ),
             ],
           )
